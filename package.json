@@ -5,7 +5,7 @@
     "ts-node-dev": "^2.0.0"
   },
   "scripts": {
-    "dev": "ts-node-dev --respawn  ./src/index.ts"
+    "dev": "ts-node-dev --respawn  ./src/generic-keyof-constances.ts"
   },
   "dependencies": {
     "typescript": "^5.0.4"
