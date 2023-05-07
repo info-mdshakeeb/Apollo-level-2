@@ -114,15 +114,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"Typescript@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "Typescript@workspace:."
-  dependencies:
-    ts-node-dev: ^2.0.0
-    typescript: ^5.0.4
-  languageName: unknown
-  linkType: soft
-
 "abbrev@npm:^1.0.0":
   version: 1.1.1
   resolution: "abbrev@npm:1.1.1"
@@ -863,6 +854,15 @@ __metadata:
   checksum: a96865108c6c3b1b8e1d5e9f11843de1e077e57737602de1b82030815f311be11f96f09cce59bd5b903d0b29834733e5313f9301e3ed6d6f6fba2eae0df4298f
   languageName: node
   linkType: hard
+
+"module_4@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "module_4@workspace:."
+  dependencies:
+    ts-node-dev: ^2.0.0
+    typescript: ^5.0.4
+  languageName: unknown
+  linkType: soft
 
 "ms@npm:2.1.2":
   version: 2.1.2
