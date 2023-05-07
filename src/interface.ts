@@ -1,49 +1,51 @@
-// // type Alias vs interface
-// // type Alias:
+type User = {
+  name: string;
+  age: number;
+};
 
-// type Users = {
-//   name: string;
-//   age: number;
+type extendedUser = User & {
+  role: string;
+};
+
+interface IUser {
+  name: string;
+  age: number;
+}
+
+interface IExtendedUser extends IUser {
+  role: string;
+}
+
+type rollNumber = number;
+
+//Object , Function , Array
+
+type addNumbersType = (num1: number, num2: number) => number;
+
+interface IAddNumbers {
+  (num1: number, num2: number): number;
+}
+
+type rollNumbersType = number[];
+interface IRollNumbers {
+  [index: number]: string;
+}
+const rollNumbers: IRollNumbers = ["1", "4", "5"]; //[index]
+
+const addNumbers: addNumbersType = (num1, num2) => num1 + num2;
+
+const user: extendedUser = {
+  name: "Omanush",
+  age: 2000,
+  role: "Unknown",
+};
+// const userWithTypeAlias: User = {
+//   name: "Type Alias",
+//   age: 100,
 // };
-// // interface: it use only object type of data
-// interface IUser {
-//   name: string;
-//   age: number;
-// }
-// interface IExtendedUser extends IUser {
-//   roll: number;
-// }
 
-// const userWithTypeAlias: Users = {
-//   name: "shakeeb",
-//   age: 20,
+// const userWithInterface: IUser = {
+//   name: "Interface",
+//   age: 200,
 // };
-
-// const userWithTypeInterface: IUser = {
-//   name: "interface",
-//   age: 12,
-// };
-
-// const userWithTypeAliasEx: IExtendedUser = {
-//   name: "",
-//   age: 22,
-//   roll: 2,
-// };
-
-// //type Alias function
-// type AddNumberType = (num1: number, num2: number) => number;
-
-// // type Alias array
-// type FriendsType = string[];
-
-// const friends: FriendsType = ["data", "shakeeb"];
-
-// //  interface can be used in function and array too:
-// interface IAddNumbers {
-//   (num1: number, num2: number): number;
-// }
-
-// interface IFriendsType {
-//   [index: number]: string;
-// }
-// const Friends: IFriendsType = ["data", "shakeeb"];
+// userWithInterface.

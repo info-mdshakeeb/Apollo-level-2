@@ -1,39 +1,48 @@
-// type GenicArray<T> = Array<T>;
+type GenericTuple<X, Y> = [X, Y];
 
-// const roleNumbers: GenicArray<number> = [1, 22, 3, 423];
-// const roleNumbers1: GenicArray<string> = ["aka", "bak"];
-// const roleNumbers2: GenicArray<boolean> = [true, false];
+const relation: GenericTuple<string, string> = ["Persian", "Kate Winslet"];
 
-// //alias type of generic Array :
+// type RelationWithSalaryType = { name: string; salary: number };
 
-// //define array type:
-// type UserDetails = { name: string; age: number };
-// const userDetails: Array<UserDetails> = [
-//   {
-//     name: "ff",
-//     age: 22,
-//   },
-// ];
-// //define tuple array :
+interface RelationWithSalaryInterface {
+  name: string;
+  salary: number;
+}
 
-// type GenericArray<X, Y> = [X, Y];
-// const relation: GenericArray<string, string> = ["sa", "ss"];
-// type relationWithSalaryType = { name: string; salary: number };
+const relationWithSalary: GenericTuple<RelationWithSalaryInterface, string> = [
+  {
+    name: "Persian",
+    salary: 1000000000,
+  },
+  "Kate Winslet",
+];
 
-// const relationWithSalary: GenericArray<relationWithSalaryType, string> = [
-//   {
-//     name: "shakeeb",
-//     salary: 1000000,
-//   },
-//   "din",
-// ];
+const relationWithSalary2: GenericTuple<RelationWithSalaryType, string> = [
+  {
+    name: "Persian",
+    salary: 1000000000,
+  },
+  "Kate Winslet",
+];
 
-// const relationWithSalarY1: GenericArray<relationWithSalaryType, string> = [
-//   {
-//     name: "rakib",
-//     salary: 10000,
-//   },
-//   "dunaiya",
-// ];
+type GenericArray<T> = Array<T>;
 
-// // using
+const rollNumbers: GenericArray<number> = [44, 12, 4];
+const rollNumbers2: GenericArray<string> = ["44", "12", "4"];
+const rolllNumbers3: GenericArray<boolean> = [true, false];
+
+type NameRollType = { name: string; roll: number };
+
+const userNameAndRollNumbers: GenericArray<NameRollType> = [
+  {
+    name: "Mr. X",
+    roll: 1,
+  },
+  {
+    name: "Mr. Y",
+    roll: 2,
+  },
+];
+
+add(x, y, z);
+add(3, 4, 5);

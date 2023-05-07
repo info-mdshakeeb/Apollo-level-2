@@ -1,41 +1,36 @@
-// normal type of array type :
-const number = (num1: number): number[] => [num1];
-// generic type of array :
-const number1 = <T, X>(parma1: T, parma2: X): [T, X] => [parma1, parma2];
+//Arrow Function
 
-const result1 = number1<string, string>("", "");
-const result2 = number1<number, Array<string>>(22, ["usa"]);
-
-interface IResult {
-  name: string;
-}
-
-const result3 = number1<IResult, boolean>({ name: "shakeeb" }, false);
-
-//spread operator :
-// const crush = "nai";
-// const myInfo = {
-//   name: "shakeeb",
-//   age: 24,
-//   salary: 122222222,
-// };
-// const newData = { ...myInfo, crush };
-
-interface IMyInfo {
-  name: string;
-  age: number;
-  salary: number;
-}
-const myInfo: IMyInfo = {
-  name: "shakeeb",
-  age: 24,
-  salary: 122222222,
+const createArray = (param: string): string[] => {
+  return [param];
+};
+const createArray1 = <X, Y>(param1: X, param2: Y): [X, Y] => {
+  return [param1, param2];
 };
 
-const addMeIn = <T extends IMyInfo>(myInfo: T): T => {
-  const crush = "nai";
+function createArray2<X, Y>(param1: X, param2: Y): [X, Y] {
+  return [param1, param2];
+}
+
+const result1 = createArray1<string, string>("Bangladesh", "I love My Country");
+const result2 = createArray1<boolean, Array<string>>(false, ["USA"]);
+
+type Name = { name: string };
+
+const result3 = createArray1<Name, boolean>({ name: "Bangladesh" }, false);
+
+//Spread Operator
+
+// const newData = {...myInfo ,crush};
+const addMeInMyCrushMind = <T>(myInfo: T) => {
+  const crush = "kate Winslet";
   const newData = { ...myInfo, crush };
   return newData;
 };
-const result5 = addMeIn<IMyInfo>(myInfo);
-console.log(result5);
+
+const myInfo = {
+  name: "Persian",
+  age: 100,
+  salary: 100000000,
+};
+const result5 = addMeInMyCrushMind(myInfo);
+result5.
