@@ -35,8 +35,6 @@ const result = makeArray<number, number>(12, 12);
 
 =>unknown and any are 2 special types that can hold any value. unknown is recommended over any because it provides safer typing — you have to use type assertion or narrow to a specific type if you want to perform operations on unknown
 
-### 5. Can you give an example of how to use enums in TypeScript?
+### 5. What is the "as" keyword used for in TypeScript?
 
-### 6. What is the "as" keyword used for in TypeScript?
-
-### 7. Can you explain how to use "type guards" with "in" and "typeof" operators in TypeScript?
+=> The as keyword is a type assertion in typescript. Type assertion is used such that we can set the data type of the variable on our own and tells the compiler not to infer it on its own. Type assertion is used to tell the compiler that we want to treat any as a number, or string.
