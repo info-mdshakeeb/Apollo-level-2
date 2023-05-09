@@ -1,15 +1,15 @@
-const user: {
-  name: string;
-  age: number;
-  isAdmin: boolean;
-  Address?: "Jamalpur";
-  readonly Email: string;
-} = {
-  name: "shakeeb",
-  age: 21,
-  isAdmin: false,
-  Address: "Jamalpur",
-  Email: "shakeeb@shakeeb",
-};
+// const user: {
+//   name: string;
+//   age: number;
+//   isAdmin: boolean;
+//   Address?: "Jamalpur";
+//   readonly Email: string;
+// } = {
+//   name: "shakeeb",
+//   age: 21,
+//   isAdmin: false,
+//   Address: "Jamalpur",
+//   Email: "shakeeb@shakeeb",
+// };
 // user email is a readonly property that cannot modified
 // user?.Email ="shakeeb"
